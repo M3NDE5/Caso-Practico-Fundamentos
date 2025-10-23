@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edge Computing Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 Edge Computing Demo</h1>
+    
+
+    <form id="dataForm">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="email" id="correo" placeholder="Correo" required>
+      <button type="submit">Guardar localmente</button>
+    </form>
+
+    <button id="enviarServidor">📤 Enviar al servidor</button>
+
+    <div class="log">
+      <h2>📋 Log de operaciones</h2>
+      <ul id="logList"></ul>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

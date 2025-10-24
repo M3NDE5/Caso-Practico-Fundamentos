@@ -1,28 +1,35 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #4a90e2, #50c9ce);
+  background: radial-gradient(circle at top left, #0a0a0a, #000);
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
-  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
-  background: white;
+  background: rgba(20, 20, 20, 0.95);
   padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h1 {
-  color: #007acc;
-  margin-bottom: 1rem;
+  color: #00b4d8;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 
 form {
@@ -34,43 +41,81 @@ form {
 input {
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   outline: none;
-  transition: border-color 0.3s;
+  background-color: #111;
+  color: #e0e0e0;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
 input:focus {
-  border-color: #007acc;
+  border-color: #00b4d8;
+  background-color: #181818;
 }
 
 button {
-  background-color: #007acc;
+  background-color: #00b4d8;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.1s;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #005f99;
+  background-color: #0092b3;
+  transform: translateY(-1px);
+}
+
+#enviarServidor {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #333;
+}
+
+#enviarServidor:hover {
+  background-color: #444;
 }
 
 .log {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   text-align: left;
+}
+
+.log h2 {
+  font-size: 1rem;
+  color: #00b4d8;
+  margin-bottom: 0.8rem;
 }
 
 #logList {
   list-style: none;
   padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #logList li {
-  background: #f1f1f1;
-  margin: 5px 0;
+  background: #111;
+  border: 1px solid #222;
+  margin: 6px 0;
   padding: 8px;
   border-radius: 6px;
   font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  input, button {
+    font-size: 0.95rem;
+  }
 }
